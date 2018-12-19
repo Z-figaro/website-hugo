@@ -11,7 +11,7 @@ rssLimit = 10  # Maximum number of items in the RSS feed.
 copyright = "All rights by figaro zp." # This message is only used by the RSS template.
 enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
 # googleAnalytics = "UA-123-45"
-# disqusShortname = "zpfigaro-1"
+disqusShortname = "zpfigaro-1"
 
 [author]
   name = "Figaro ZP"
