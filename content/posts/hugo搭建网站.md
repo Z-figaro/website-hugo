@@ -8,10 +8,10 @@ tags:
 
   我用了很多博客框架，最后还是选择了go语言开发的hugo。不管速度还是简单程度都完全不一样。
   <!-- more -->
-##搭建流程：
-以下是使用流程和心得，如果时间过久应该以[官方文档](https://gohugo.io/documentation/)为准。
   
-###安装：
+## 搭建流程：
+以下是使用流程和心得，如果时间过久应该以[官方文档](https://gohugo.io/documentation/)为准。
+### 安装：
     使用brew安装hugo
     
 
@@ -26,7 +26,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 $ brew new Hugo
 ```
 
-###hugo使用：
+### hugo使用：
 
 在你想存放网站的地方使用：
 
@@ -63,7 +63,7 @@ $ cd mysite
 
 主题使用submodule来git clone 是最方便的；也是官方建议的。
 
-###安装主题：
+### 安装主题：
 
 在[官方地址](https://themes.gohugo.io/)下载主题有两种clone方式。
 
@@ -85,7 +85,7 @@ git submodule add https://github.com/olOwOlo/hugo-theme-even.git themes/even
 cd themes/even && npm i && npm start
 ```
 
-###页面设置和发布文章
+### 页面设置和发布文章
 
 如果你想根据主题设置网站page：
 
@@ -96,7 +96,7 @@ hugo new xxxx.md
 ```
 hugo new posts/my-first-post.md
 ```
-###评论功能：
+### 评论功能：
 
 可以参考[这篇文章](https://zh4ui.net/post/2017-04-20-hugo-with-disqus/)
 
