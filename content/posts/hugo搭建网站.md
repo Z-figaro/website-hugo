@@ -98,6 +98,7 @@ hugo new posts/my-first-post.md
 ```
 ###评论功能：
 
+可以参考[这篇文章](https://zh4ui.net/post/2017-04-20-hugo-with-disqus/)
 
 
 
