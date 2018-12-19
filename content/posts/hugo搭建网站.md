@@ -1,7 +1,6 @@
 ---
 title: "Hugo搭建网站"
 date: 2018-12-18T17:14:28+08:00
-draft: true
 featuredImg: ""
 tags: 
   - hugo
