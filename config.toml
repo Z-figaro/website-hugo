@@ -57,6 +57,13 @@ disqusShortname = "zpfigaro-1"
     url = "/posts/"
     weight = 10
 
+
+  [[menu.main]]
+    name = "StudyNote-Go"
+    url = "/GOposts/"
+    weight = 10
+
+
   [[menu.main]]
     name = "About"
     url = "/about-me/"

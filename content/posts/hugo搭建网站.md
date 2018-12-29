@@ -100,6 +100,16 @@ hugo new posts/my-first-post.md
 
 可以参考[这篇文章](https://zh4ui.net/post/2017-04-20-hugo-with-disqus/)
 
+### github page结合使用
+
+可以参考[这里](https://segmentfault.com/a/1190000012975914)，了解基本部署和自动部署。
+
+如果需要手动部署：
+
+1.修改完文章之后修改draft状态为false，或者直接删除该行
+2.命令行使用hugo 生成新的public文件
+3.push 新的public文件到github
+4.等待一会就能看到了
 
 
 
