@@ -24,6 +24,9 @@ str := fmt.Sprintf("%d",a)
 str := "hello world"
 substr := str[0:5]
 ```
+
+## 字符串多行显示
+
 ## 字符串其他功能
 
 在strings包中查看系统本身提供的功能。[查看](https://go-zh.org/pkg/strings/)

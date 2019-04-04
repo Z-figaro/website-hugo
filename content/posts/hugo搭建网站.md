@@ -106,10 +106,10 @@ hugo new posts/my-first-post.md
 
 如果需要手动部署：
 
-1.修改完文章之后修改draft状态为false，或者直接删除该行
-2.命令行使用hugo 生成新的public文件
-3.push 新的public文件到github
-4.等待一会就能看到了
+1. 修改完文章之后修改draft状态为false，或者直接删除该行
+2. 命令行使用hugo 生成新的public文件
+3. push 新的public文件到github
+4. 等待一会就能看到了
 
 
 
