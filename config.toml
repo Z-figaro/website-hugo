@@ -53,19 +53,23 @@ disqusShortname = "zpfigaro-1"
 [menu]
 
   [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
-
-
-  [[menu.main]]
-    name = "StudyNote-Go"
-    url = "/StudyNote-Go/"
+    name = "Daily"
+    url = "/Daily/"
     weight = 10
 
   [[menu.main]]
-    name = "StudyNote-Python"
-    url = "/StudyNote-Python/"
+    name = "iOS"
+    url = "/iOS/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Golang"
+    url = "/Golang/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Python"
+    url = "/Python/"
     weight = 10
 
 
