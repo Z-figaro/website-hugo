@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ipfs on Figaro ZP</title>
+    <link>https://z-figaro.github.io/tags/ipfs/</link>
+    <description>Recent content in Ipfs on Figaro ZP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights by figaro zp.</copyright>
+    <lastBuildDate>Wed, 19 Dec 2018 15:37:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://z-figaro.github.io/tags/ipfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IPFS基础</title>
+      <link>https://z-figaro.github.io/daily/ipfs%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 19 Dec 2018 15:37:53 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/ipfs%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;h1 id=&#34;ipfs是什么&#34;&gt;IPFS是什么：&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;IPFS is a global, versioned, peer-to-peer filesystem. It combines good ideas
+from Git, BitTorrent, Kademlia, SFS, and the Web. It is like a single bit-
+torrent swarm, exchanging git objects. IPFS provides an interface as simple
+as the HTTP web, but with permanence built in. You can also mount the world
+at /ipfs.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这是ipfs的原话，我的理解是ipfs是一个去中心化的网络系统。它吸取了git，sfs等8个先进有效的方法来管理整个文件系统。去中心化，靠协议和各种共识机制来约定行为是未来互联网的方向；因为这就和电子商务一样，最核心的是能进一步提高效率，节约大量的成本。所以这是大趋势，不可逆转。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dailies on Figaro ZP</title>
+    <link>https://z-figaro.github.io/daily/</link>
+    <description>Recent content in Dailies on Figaro ZP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights by figaro zp.</copyright>
+    <lastBuildDate>Wed, 03 Apr 2019 16:55:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://z-figaro.github.io/daily/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> Attribute 实现系统代码提示</title>
+      <link>https://z-figaro.github.io/daily/-attribute-%E5%AE%9E%E7%8E%B0%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA/</link>
+      <pubDate>Wed, 03 Apr 2019 16:55:07 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/-attribute-%E5%AE%9E%E7%8E%B0%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA/</guid>
+      <description>资料放在最前面，方便同学查询。 官方文档 matt大神 attribute是GNU C特色之一,在iOS用的比较广泛.系统中有许多地方使用到. att</description>
+    </item>
+    
+    <item>
+      <title>Block使用详解</title>
+      <link>https://z-figaro.github.io/daily/block%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Tue, 02 Apr 2019 11:26:34 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/block%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Block本质 通过LLVM的编译器-rt子项目存储库中找到runtime下的Block源码 struct Block_layout { void *isa; int flags; int reserved; void (*invoke)(void *, ...); struct Block_descriptor *descriptor; /* Imported variables. */ }; 我们实现</description>
+    </item>
+    
+    <item>
+      <title>Xcode中如何使用断点</title>
+      <link>https://z-figaro.github.io/daily/xcode%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%AD%E7%82%B9/</link>
+      <pubDate>Thu, 21 Mar 2019 13:34:06 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/xcode%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%AD%E7%82%B9/</guid>
+      <description>断点调试 断点使用是我们开发提高效率，解决问题的不二法门；能够清楚的使用断点调试技巧，是基本技能。 edit breakpoint 编辑断点 reveal in breakpoint navigator 断点导航器 这就是我们的两</description>
+    </item>
+    
+    <item>
+      <title>Flutter基础</title>
+      <link>https://z-figaro.github.io/daily/flutter%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Thu, 07 Mar 2019 10:51:14 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/flutter%E5%9F%BA%E7%A1%80/</guid>
+      <description>Flutter是什么？ Flutter是Google一个新的用于构建跨平台的手机App的SDK。写一份代码，在Android 和iOS平台上都可</description>
+    </item>
+    
+    <item>
+      <title>超级账本</title>
+      <link>https://z-figaro.github.io/daily/%E8%B6%85%E7%BA%A7%E8%B4%A6%E6%9C%AC/</link>
+      <pubDate>Tue, 05 Mar 2019 09:57:49 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/%E8%B6%85%E7%BA%A7%E8%B4%A6%E6%9C%AC/</guid>
+      <description>Hyperledge Fabric Hyperledger Fabric 是什么？ 它是一个区块链底层平台，提供分布式账本解决方案的平台。 2015年，linux基金会启动了hyperledger项目，目标是发</description>
+    </item>
+    
+    <item>
+      <title>区块链中的联盟链</title>
+      <link>https://z-figaro.github.io/daily/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%AD%E7%9A%84%E8%81%94%E7%9B%9F%E9%93%BE/</link>
+      <pubDate>Wed, 19 Dec 2018 15:41:38 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%AD%E7%9A%84%E8%81%94%E7%9B%9F%E9%93%BE/</guid>
+      <description>联盟链是： 1.公共区块链（Public blockchains） 公共区块链是指全世界任何人都可读取的、任何人都能发送交易且交易能获得有效确认的</description>
+    </item>
+    
+    <item>
+      <title>Python基础</title>
+      <link>https://z-figaro.github.io/daily/python%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 19 Dec 2018 15:40:38 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/python%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;慢慢积累所有的基础知识，有深入的使用或者了解。会在后面单开章节写。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ARKit总结</title>
+      <link>https://z-figaro.github.io/daily/arkit%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 19 Dec 2018 15:40:19 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/arkit%E6%80%BB%E7%BB%93/</guid>
+      <description>ARkit是什么？ ARKit是WWDC 17中公开的系统库，可以提供增强现实的体验。 ARKit的工作原理： 1.相机捕捉现实景象---由ARKi</description>
+    </item>
+    
+    <item>
+      <title>区块链是什么？</title>
+      <link>https://z-figaro.github.io/daily/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Wed, 19 Dec 2018 15:38:42 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>&lt;h1 id=&#34;区块链&#34;&gt;区块链&lt;/h1&gt;
+
+&lt;h2 id=&#34;区块链到底是什么&#34;&gt;区块链到底是什么？&lt;/h2&gt;
+
+&lt;p&gt;区块链技术设计之初是为了解决不需要任何机构，组织来背书，大家就可以对某件事，某个规则，某个事物的价值和意义达成一种共识；遵守就可以得到正反馈，不遵守又想得到正反馈的任何行为都被设计的这一套区块链技术所防止。这就是我理解的区块链技术。近代以来的伟大技术好像都是这样为了理想诞生的，git之父Linus Torvalds（同样也是linux之父，发现为什么叫linux了。）为了不想和别人一起上班，不想天天面对别人，所以发明了git来管理代码。。。。。任性啊。所以区块链技术不是为了发币，发币只是提供正反馈的一种抽象机制；毕竟数字最容易提现。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go语言基础</title>
+      <link>https://z-figaro.github.io/daily/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 19 Dec 2018 15:38:14 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;go 的所有基础知识，根据自己的情况，不定时添加。更深入的内容会单开文章来写。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

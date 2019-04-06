@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Figaro ZP</title>
+    <link>https://z-figaro.github.io/tags/python/</link>
+    <description>Recent content in Python on Figaro ZP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights by figaro zp.</copyright>
+    <lastBuildDate>Wed, 19 Dec 2018 15:40:38 +0800</lastBuildDate>
+    
+	<atom:link href="https://z-figaro.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python基础</title>
+      <link>https://z-figaro.github.io/daily/python%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 19 Dec 2018 15:40:38 +0800</pubDate>
+      
+      <guid>https://z-figaro.github.io/daily/python%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;慢慢积累所有的基础知识，有深入的使用或者了解。会在后面单开章节写。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
