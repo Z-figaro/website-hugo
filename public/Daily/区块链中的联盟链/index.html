@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta itemprop="name" content="区块链中的联盟链">
+<meta itemprop="description" content="联盟链是： 1.公共区块链（Public blockchains） 公共区块链是指全世界任何人都可读取的、任何人都能发送交易且交易能获得有效确认的">
+
+
+<meta itemprop="datePublished" content="2018-12-19T15:41:38&#43;08:00" />
+<meta itemprop="dateModified" content="2018-12-19T15:41:38&#43;08:00" />
+<meta itemprop="wordCount" content="1221">
+
+
+
+<meta itemprop="keywords" content="blockchain,fabric,go,ledgechain," />
+<meta property="og:title" content="区块链中的联盟链" />
+<meta property="og:description" content="联盟链是： 1.公共区块链（Public blockchains） 公共区块链是指全世界任何人都可读取的、任何人都能发送交易且交易能获得有效确认的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://z-figaro.github.io/daily/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%AD%E7%9A%84%E8%81%94%E7%9B%9F%E9%93%BE/" />
+<meta property="article:published_time" content="2018-12-19T15:41:38&#43;08:00"/>
+<meta property="article:modified_time" content="2018-12-19T15:41:38&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="区块链中的联盟链"/>
+<meta name="twitter:description" content="联盟链是： 1.公共区块链（Public blockchains） 公共区块链是指全世界任何人都可读取的、任何人都能发送交易且交易能获得有效确认的"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>区块链中的联盟链</title>
+	<link rel="stylesheet" href="https://z-figaro.github.io/css/style.min.c693329ce3bac2503f88115a4011a284a06d53e30f484562a37664dc4c5f0a74.css" integrity="sha256-xpMynOO6wlA/iBFaQBGihKBtU+MPSEVio3Zk3ExfCnQ=">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://z-figaro.github.io/">Figaro ZP</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					<a href="https://z-figaro.github.io/daily/">Daily</a>
+					<a href="https://z-figaro.github.io/golang/">Golang</a>
+					<a href="https://z-figaro.github.io/python/">Python</a>
+					<a href="https://z-figaro.github.io/ios/">iOS</a>
+					<a href="https://z-figaro.github.io/about-me/">About</a>
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://www.facebook.com/zp.figaro.5" target="_blank" rel="noopener" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="zpfigaro@gmail.com" target="_blank" rel="noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a><a href="https://github.com/Z-figaro" target="_blank" rel="noopener" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://z-figaro.github.io/daily/">Daily</a></li>
+			<li><a href="https://z-figaro.github.io/golang/">Golang</a></li>
+			<li><a href="https://z-figaro.github.io/python/">Python</a></li>
+			<li><a href="https://z-figaro.github.io/ios/">iOS</a></li>
+			<li><a href="https://z-figaro.github.io/about-me/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1>区块链中的联盟链</h1>
+		<div class="content">
+			
+
+<h2 id="联盟链是">联盟链是：<a href="#联盟链是" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>1.公共区块链（Public blockchains）</p>
+
+<blockquote>
+<p>公共区块链是指全世界任何人都可读取的、任何人都能发送交易且交易能获得有效确认的、任何人都能参与其中共识过程的区块链——共识过程决定哪个区块可被添加到区块链中和明确当前状态。作为中心化或者准中心化信任的替代物，公共区块链的安全由“加密数字经济”维护——“加密数字经济”采取工作量证明机制或权益证明机制等方式，将经济奖励和加密数字验证结合了起来，并遵循着一般原则：每个人从中可获得的经济奖励，与对共识过程作出的贡献成正比。这些区块链通常被认为是“完全去中心化”的。</p>
+</blockquote>
+
+<p>2.联盟区块链：（Consortium blockchains）</p>
+
+<blockquote>
+<p>联盟区块链是指其共识过程受到预选节点控制的区块链；例如，不妨想象一个有15个金融机构组成的共同体，每个机构都运行着一个节点，而且为了使每个区块生效需要获得其中10个机构的确认（2/3确认）。区块链或许允许每个人都可读取，或者只受限于参与者，或走混合型路线，例如区块的根哈希及其API（应用程序接口）对外公开，API可允许外界用来作有限次数的查询和获取区块链状态的信息。这些区块链可视为“部分去中心化”。</p>
+</blockquote>
+
+<p>3.完全私有区块链（Fully private blockchains）</p>
+
+<blockquote>
+<p>完全私有的区块链是指其写入权限仅在一个组织手里的区块链。读取权限或者对外开放，或者被任意程度地进行了限制。相关的应用囊括数据库管理、审计、甚至一个公司，尽管在有些情况下希望它能有公共的可审计性，但在很多的情形下，公共的可读性并非是必须的。</p>
+</blockquote>
+
+<p>——Vitalik Buterin（以太坊创始人）谈Private vs Public</p>
+
+<p>以上是V神理解的区块链细分区别，因为工作的原因，我三种链都接触了。首先，任何流程化和需要审核和信任的过程都可以用区块链技术；所以未来区块链技术会是一份像今天开发web页面一样的基本技术。未来必定会有浩如星海的私链，错综复杂的联盟链；加上部分地区，国家基本的共链。这些链把我们所有人的生活都数字化。</p>
+
+<p>联盟链未来一定是企业标配，现在还做不到，只是技术和成本门槛。Linux基金会其中的开源项目fabric，提供了开发基础框架；如果未来能够突破100个节点这样的限制条件，潜力无限。</p>
+
+<p>联盟链一定会经历根据业务特点，形成很多不能兼容和效率低下的问题。最好的解决办法就是开发一条侧链来辅助各公司甚至各个业务层来完成具体的工作。这样会成为一个轻客户端的彻底解决方案，不过开发侧链又会是一个专门的部分，人力物力会和中心化的微服务中台比较上；会有一部分的提高。但是对于有一定规模的公司，这就不是一个问题。</p>
+
+<p><img src="https://lh3.googleusercontent.com/-xmnkNzfEfv4/XBr5INjeakI/AAAAAAAAB6Y/QiqIcoGfi28MqjKLsIamtS9cob93EEWRgCHMYCw/I/%255BUNSET%255D" alt="屏幕快照 2018-12-20 上午10.03.24" /></p>
+
+<h2 id="联盟链和多链架构的价值">联盟链和多链架构的价值<a href="#联盟链和多链架构的价值" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<ul>
+<li>协作灵活</li>
+<li>可编程资产打通联盟链条</li>
+<li>利益分配公平公正</li>
+</ul>
+
+<p>所有的价值，其实都是根据业务场景和需求来定义的。所有伟大的创造，都是根据这样的方式来演进。</p>
+
+<p>基金链：Lp，Gp，Cp这三个主要角色，甚至加上vc，监管方，银行。这些所有是否都应该用去中心的技术方案呢？</p>
+
+<p>联盟链一定是先线下共识达成之后，才能够上链。</p>
+
+		</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2019 <a href="https://z-figaro.github.io/">Figaro ZP</a> &#183; <a href="https://creativecommons.org/licenses/by-figaro zp" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://z-figaro.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+	<script src="https://z-figaro.github.io/js/main.min.8f39f24808e9d0a9b02da58c2d2838da859dc0b7bdfadbdb1883aae8b6adacfe.js" integrity="sha256-jznySAjp0KmwLaWMLSg42oWdwLe9+tvbGIOq6LatrP4="></script>
+
+</body>
+
+</html>
