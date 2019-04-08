@@ -53,10 +53,14 @@ disqusShortname = "zpfigaro-1"
 [menu]
 
   [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
+    name = "Daily"
+    url = "/Daily/"
     weight = 10
 
+  [[menu.main]]
+    name = "iOS"
+    url = "/iOS/"
+    weight = 10
 
   [[menu.main]]
     name = "Golang"
@@ -67,11 +71,7 @@ disqusShortname = "zpfigaro-1"
     name = "Python"
     url = "/Python/"
     weight = 10
-
-  [[menu.main]]
-    name = "iOS"
-    url = "/iOS/"
-    weight = 10
+    
 
   [[menu.main]]
     name = "About"
