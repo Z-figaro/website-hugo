@@ -64,7 +64,7 @@ disqusShortname = "zpfigaro-1"
 
   [[menu.main]]
     name = "Golang"
-    url = "/golang/"
+    url = "/golangNote/"
     weight = 10
 
   [[menu.main]]
