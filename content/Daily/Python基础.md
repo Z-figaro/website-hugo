@@ -1,7 +1,7 @@
 ---
 title: "Python基础"
 date: 2018-12-19T15:40:38+08:00
-
+draft: false
 featuredImg: ""
 tags: 
   - python

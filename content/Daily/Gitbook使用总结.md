@@ -1,7 +1,7 @@
 ---
 title: "Gitbook使用总结"
 date: 2018-12-19T15:36:44+08:00
-
+draft: false
 featuredImg: ""
 tags: 
   - gitbook
