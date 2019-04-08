@@ -54,7 +54,7 @@ disqusShortname = "zpfigaro-1"
 
   [[menu.main]]
     name = "Daily"
-    url = "/DailyNote/"
+    url = "/dailyNote/"
     weight = 10
 
   [[menu.main]]
@@ -64,7 +64,7 @@ disqusShortname = "zpfigaro-1"
 
   [[menu.main]]
     name = "Golang"
-    url = "/Golang/"
+    url = "/golang/"
     weight = 10
 
   [[menu.main]]
