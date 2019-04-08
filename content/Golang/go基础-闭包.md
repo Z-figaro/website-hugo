@@ -1,7 +1,7 @@
 ---
 title: "Go基础 闭包"
 date: 2019-03-05T10:01:17+08:00
-draft: true
+
 tags: 
   - golang
   - blockchain
