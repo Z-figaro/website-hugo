@@ -54,7 +54,7 @@ disqusShortname = "zpfigaro-1"
 
   [[menu.main]]
     name = "Daily"
-    url = "/Daily/"
+    url = "/DailyNote/"
     weight = 10
 
   [[menu.main]]

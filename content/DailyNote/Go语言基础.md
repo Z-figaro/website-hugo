@@ -2,7 +2,7 @@
 title: "Go语言基础"
 date: 2018-12-19T15:38:14+08:00
 draft: false
-featuredImg: ""
+
 tags: 
   - go
 ---
