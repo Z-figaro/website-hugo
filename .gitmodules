@@ -1,12 +1,10 @@
-[submodule "themes/ananke"]
-	path = themes/ananke
-	url = https://github.com/budparr/gohugo-theme-ananke.git
+
 [submodule "LeaveIt"]
 	path = LeaveIt
 	url = https://github.com/liuzc/LeaveIt.git
 [submodule "public"]
 	path = public
 	url = https://github.com/Z-figaro/z-figaro.github.io.git
-[submodule "themes/themes/hermit"]
-	path = themes/themes/hermit
+[submodule "themes/hermit"]
+	path = themes/hermit
 	url = https://github.com/Track3/hermit.git
