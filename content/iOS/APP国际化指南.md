@@ -18,26 +18,26 @@ tags:
 
 ## 国际化的基本姿势
 
-一个项目要国际化，首先要在project 的 build settings 中添加需要的文件：
+一个项目要国际化，首先要在project 的 build settings 中添加需要的语言：
 
-![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-04-28%20%E4%B8%8A%E5%8D%881.44.28.png?token=ADLKPSTG5DGAT2GFFAHPNVS4YSKVA)
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/addLanguage.png?token=ADLKPSR6UKZLYJZEFVCBFE24YS3GK)
 
 这里是选择整个项目要支持的语言，点+号选择你需要的就好了。
-
-![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/xib%E5%9B%BD%E9%99%85%E5%8C%962019-04-28%20%E4%B8%8A%E5%8D%881.56.05.png?token=ADLKPSS6V3CNPTVNTCWY5FK4YSMCA)
 
 
 ### Xib和stroyboard国际化
 
 如果是新项目，我强烈建议你劲量多的使用 xib 和 stroyboard 来构建项目，因为如果你遇到了要支持阿拉伯地区的语言，他们的习惯是从右到左的，也就是系统的RTL（rignt to left）。整个界面都需要镜像翻转，那时候系统提供的方法只支持xib 和stroyboard 。你如果用的纯代码写死，那么会麻烦很多。
 
-xib和SB要国际化，其实很简单；只需要在相应的文件中选择
+xib和SB要国际化，其实很简单；只需要在相应的文件中选择。
+
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/xib.png?token=ADLKPSTLEXERI6JTQGF7O3S4YS3CS)
 点击Localization，选择相应的语言，系统就会自动修改项目的实际文件结构：
 
-![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-04-28%20%E4%B8%8A%E5%8D%881.58.46.png?token=ADLKPSVRD5MJPTVSH6PNUFK4YSMK6)
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/stringStructure.png?token=ADLKPSX347XJNI2DXX5IP6S4YS3BC)
 
 会出现以下的项目样子：
-![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-04-28%20%E4%B8%8A%E5%8D%882.02.06.png?token=ADLKPSRBRPXIZWBFSNAA2QS4YSM2G)
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/projectStructure.png?token=ADLKPSX64VIHEJEABI6U5CC4YS24G)
 
 这里要注意下，系统自动生成的文件中会出现已经在xib或者SB 中使用的字符；但是只会生成在你点击Localization那一个时刻已经有了的字符，如果你持续开发。又添加删除了控件，那么不会自动生成。只有取消该部分国际化，然后再把这种语言打钩，选择上之后才会生成新的文件，并且会覆盖掉你之前已经写好的国际化文件。本脚本已经解决这个问题，不再需要手动维护。解决原理是：
 
@@ -69,7 +69,7 @@ NSLocalizedString("这里是需要国际化的字符",comment: "这里是注释"
 
 ```
 NSLocalizedStringFromTable(key, tbl, comment) 这种方式比较少用，因为这个tbl就是tbl.strings的名字，在代码部分使用了宏之后。你还需要生成资源文件.strings:
-![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-04-28%20%E4%B8%8A%E5%8D%882.26.26.png?token=ADLKPSVIMCXP7B5EV5O44JS4YSPVU)
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/generateStrings.png?token=ADLKPSWCJNQO7FR4PVGEHE24YS2YC)
 
 你生成这个文件的时候，输入的文件名如果是 _Localizable_ 那么你就使用第一个宏，如果你输入了别的名字，那么你就应该使用 NSLocalizedStringFromTable(key, tbl, comment)。其中的tbl就是你输入的文件名称。
 
@@ -102,7 +102,7 @@ NSLocationAlwaysAndWhenInUseUsageDescription = “使用定位的描述”
 ```
 
 查找对应的权限名称，只需要选择showRaw就会出现：
-![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-04-28%20%E4%B8%8A%E5%8D%883.03.40.png?token=ADLKPSQELAGJBTIJPFRF3V24YST56)
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/showRaw.png?token=ADLKPSR6ZOIZI4UI7HBA5LS4YS2SS)
 
 ### 系统资源国际化
 
@@ -112,6 +112,7 @@ CFBundleDevelopmentRegion 这个权限，系统开发语言走的。这个是系
 ### 服务器端国际化
 
 这部分没有什么特别的好办法，纯粹是两端协商实现。一般就两种：
+
 1.后端完全实现相应的语言提示返回给前端。
 2.后端不管语言，返回一套自己规定的提示语言编号集合。前端根据这个编号提示相应的内容。
 
@@ -121,7 +122,9 @@ CFBundleDevelopmentRegion 这个权限，系统开发语言走的。这个是系
 其实在iOS中国际化，就是切换不同的语言资源，显示不同的文件信息。然后系统用了一个Localizable的系统宏，来维护key/value的关系。系统中每一种语言对应一种bundle资源文件。当你在切换不同语言的时候，就去找对应的语言包中的资源。所以我们可以利用runtime动态加载不同的bundle来实现语言的切换。在demo中有具体的使用例子。
 
 这个部分一般只有两种实现方式：
+
 1.微信的方式：切换bundle。
+
 2.微博的方式：发送语言切换通知。
 
 这部分讨论的文章已经非常多，并且很成熟了；我就不过多赘述。
@@ -129,8 +132,11 @@ CFBundleDevelopmentRegion 这个权限，系统开发语言走的。这个是系
 ## 疑难问题解决
 
 1.阿拉伯地区支持RTL
+
 2.textView系统不支持
+
 3.AttributedString富文本国际化
+
 
 太晚了，之后慢慢更新。
 
