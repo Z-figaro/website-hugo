@@ -1,75 +1,147 @@
 ---
 title: "APP国际化指南"
 date: 2018-12-19T15:39:51+08:00
-draft: true
+draft: false
 featuredImg: ""
 tags: 
   - iOS
+  - Python
 ---
 
-    
+# iOS国际化完全指南
 
-# APP国际化完全指南
+看完这篇文章你可以解决国际化的绝大部分问题，并且本人重写了前人的脚本；可以实现代码，xib，storyboard的自动国际化。自动新增，删除文字，项目中的所有内容，不需要再手动维护，新项目简单国际化，老项目轻松国际化。[项目地址](https://github.com/Z-figaro/ZPPLanguage)
 
-本文有的部分只适合iOS9之后的项目，不适用的部分；我会单独指出来。请注意！
+我试图用XCodeEditor来实现一个mac应用，让我们的国际化完全不用在项目中操作，单个语言文件没问题，但是因为多个国际化语言的文件引用关系始终不能正确设置，所以没有成功，如果有mac开发的大佬或者对project.pbxproj 这个文件工程核心文件结构有了解的同学；可以联系我一起实现这个[项目]()
 
-国际化在早期，是一件特别费时费力的事情；尽管官方给了一些非常好的案例；但是知识点琐碎。并且如果项目是半途或者已经开发完，中途加入国际化的。那么工作就会变得非常棘手。经过了这些年的发展，国际化方案有了一些进步，本人也做了一套工具。站在前人的肩膀上，更进一步。
+如果有不清楚的地方，欢迎联系我补充。
 
-## 高效国际化
+## 国际化的基本姿势
 
-在官方文档中，已经有了国际化方法。但是实际上，有非常多的细节和坑，让我们没有能够实现高效这一原则。ZPPGlobal 的目的就是让我们从大量的枯燥工作中解脱出来，只需要提供相应的国际化文案，就可以直接简单高效的完成项目的国际化。我的目标是新项目简单完成，老项目轻松完成。
+一个项目要国际化，首先要在project 的 build settings 中添加需要的语言：
+
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/addLanguage.png?token=ADLKPSR6UKZLYJZEFVCBFE24YS3GK)
+
+这里是选择整个项目要支持的语言，点+号选择你需要的就好了。
 
 
-## 国际化的原理
+### Xib和stroyboard国际化
 
-在iOS中国际化就是用一套资源文件来管理项目中的文本和图片，音视频等，使它在需要的语言下，显示我们设定的资料。每一个控件都会生成独一无二的objectID，然后用key/value的方式，找到独一无二的key，根据key显示不同的value。本质上就是这么简单。
+如果是新项目，我强烈建议你劲量多的使用 xib 和 stroyboard 来构建项目，因为如果你遇到了要支持阿拉伯地区的语言，他们的习惯是从右到左的，也就是系统的RTL（rignt to left）。整个界面都需要镜像翻转，那时候系统提供的方法只支持xib 和stroyboard 。你如果用的纯代码写死，那么会麻烦很多。
 
-### 新项目 Vs 老项目
+xib和SB要国际化，其实很简单；只需要在相应的文件中选择。
 
-新项目相比老项目会简单非常多，只要我们使用以下的方法就可以实现。老项目的解决方法也会在各个部分具体说明。
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/xib.png?token=ADLKPSTLEXERI6JTQGF7O3S4YS3CS)
+点击Localization，选择相应的语言，系统就会自动修改项目的实际文件结构：
 
-#### APP语言修改方式
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/stringStructure.png?token=ADLKPSX347XJNI2DXX5IP6S4YS3BC)
 
-项目要随系统语言切换，非常简单。完成了需要国际化的资源文件，用户修改了系统语言，在APP重启之后就会自动转换。不过，我们一般需要的是应用内切换，其中又有两种方式。
-1.微信一样的，设定了语言之后；APP重新加载，选定某一个页面重新打开app。
-2.微博这样的，对整个项目的所有页面发通知，根据自己的设定可以定制化的控制某些页面的显示。
-第一种方式，相对简单一些；第二种方式需要一开始就对项目有整体的规划。
+会出现以下的项目样子：
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/projectStructure.png?token=ADLKPSX64VIHEJEABI6U5CC4YS24G)
 
-如图所示：
-![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-04-18%20%E4%B8%8B%E5%8D%886.12.11.png?token=ADLKPSWOJ4URI4TDBSXPPN24XBHJS)
+这里要注意下，系统自动生成的文件中会出现已经在xib或者SB 中使用的字符；但是只会生成在你点击Localization那一个时刻已经有了的字符，如果你持续开发。又添加删除了控件，那么不会自动生成。只有取消该部分国际化，然后再把这种语言打钩，选择上之后才会生成新的文件，并且会覆盖掉你之前已经写好的国际化文件。本脚本已经解决这个问题，不再需要手动维护。解决原理是：
 
-在工程中，选择project———— info ———— locallizations 中可以看到当前使用的语言资源，点击+号，就可以添加相应的国际化语言资源。需要显示几种语言，就添加几种。
-系统默认是使用英文的，表示开发语言是英文。要修改默认开发语言，在info.plist中修改：
-![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-04-18%20%E4%B8%8B%E5%8D%886.21.09.png?token=ADLKPSVYFGHB3EAOQZ6CPIC4XBILO)
 
-在代码中 使用系统的宏：NSLocalizedString 对每一个字符串进行修饰，然后在对应的语言资源文件中，填写相应的key值对应的value。这样选择了不同的语言，就可以显示不同的文字。是不是很简单？不过这和我们的要求还离得很远。想象一下，你项目中，有几千个不同的文本，其中有重复的，也有不同的。那你要自己手动写几千个不同的k/v?
-
-系统的宏：
 ```
+ibtool --generate-stringsfile MyNib.strings MyNib.nib
+```
+ibtool这个小工具，系统自带。可以自动把xib或者sb 生成一个.stings文件。
+
+### 代码国际化
+
+代码部分的国际化，只有一个办法就是使用系统的国际化宏：
+
+```
+NSLocalizedString("这里是需要国际化的字符",comment: "这里是注释")
+
 #define NSLocalizedString(key, comment) \
 	    [NSBundle.mainBundle localizedStringForKey:(key) value:@"" table:nil]
+
+...
+/* Method for retrieving localized strings. */
+- (NSString *)localizedStringForKey:(NSString *)key value:(nullable NSString *)value table:(nullable NSString *)tableName NS_FORMAT_ARGUMENT(1);
+
+
 #define NSLocalizedStringFromTable(key, tbl, comment) \
 	    [NSBundle.mainBundle localizedStringForKey:(key) value:@"" table:(tbl)]
 #define NSLocalizedStringFromTableInBundle(key, tbl, bundle, comment) \
 	    [bundle localizedStringForKey:(key) value:@"" table:(tbl)]
-#define NSLocalizedStringWithDefaultValue(key, tbl, bundle, val, comment) \
-	    [bundle localizedStringForKey:(key) value:(val) table:(tbl)]
-	    
+
+```
+NSLocalizedStringFromTable(key, tbl, comment) 这种方式比较少用，因为这个tbl就是tbl.strings的名字，在代码部分使用了宏之后。你还需要生成资源文件.strings:
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/generateStrings.png?token=ADLKPSWCJNQO7FR4PVGEHE24YS2YC)
+
+你生成这个文件的时候，输入的文件名如果是 _Localizable_ 那么你就使用第一个宏，如果你输入了别的名字，那么你就应该使用 NSLocalizedStringFromTable(key, tbl, comment)。其中的tbl就是你输入的文件名称。
+
+我的python脚本只支持第一种方式的宏，只要你实现了这个宏。那么我的脚本就支持全自动导入，自动添加，删除。建议在comment部分写上文件名，如果你有了上千个需要翻译的文字，那么文件很大的时候。方便你定位具体的字符。
+我的实现原理是借助了：
+
+```
+genstrings -o .m en.lproj
+```
+genstrings 系统自带，可以把一个文件使用了宏的字符，生成对应的文件到 en.lproj 目录中去。
+
+我的脚本已经处理了细节问题，不再需要手动维护。国际化只需要填空就好了。
+
+### 图片，影视频国际化
+
+这部分国际化很简单:
+1. 代码部分
+    和在代码的文字部分一样，只要取好key，然后在不同的语言中写好相应的名字就可以。
+2. xib和SB部分
+    在项目中专门建立一个文件目录放置图片。然后和xib，sb一样。在右侧文件资源监控器中点Localization，然后在项目实际目录中修改就好了。
+    
+图片，视频，音频没有区别。
+
+### 系统权限国际化---InfoPlist
+
+系统权限部分生成多语言文件部分和其他的没有区别，你只需要在生成的文件中：
+
+```
+NSLocationAlwaysAndWhenInUseUsageDescription = “使用定位的描述”
 ```
 
-#### 文本国际化
-#### 图片国际化
-#### xib/SB 国际化
-#### 三方国际化
-#### APP图标国际化
-#### 启动图国际化
-#### 应用名称国际化
-#### 权限提示国际化
-#### APP调取系统资源页面国际化
-#### 服务端数据内容国际化
+查找对应的权限名称，只需要选择showRaw就会出现：
+![](https://raw.githubusercontent.com/Z-figaro/picBed/master/image/showRaw.png?token=ADLKPSR6ZOIZI4UI7HBA5LS4YS2SS)
+
+### 系统资源国际化
+
+比如进入调取相册页面，通讯录页面,还有复制粘贴的系统提示等，这部分是跟着
+CFBundleDevelopmentRegion 这个权限，系统开发语言走的。这个是系统默认语言。当什么都没有的时候，它就会是英文。如果你修改了。系统资源页面会根据你的修改生效。这里很有意思，有两种选择方式：一种是选择国家，一种是选择具体的语言范围。这是两个概念！！如果你要修改默认开发语言，选择国际。如果你要修改系统资源页面，你要选择语言范围。比如：zh_CN
+
+### 服务器端国际化
+
+这部分没有什么特别的好办法，纯粹是两端协商实现。一般就两种：
+
+1.后端完全实现相应的语言提示返回给前端。
+2.后端不管语言，返回一套自己规定的提示语言编号集合。前端根据这个编号提示相应的内容。
 
 
-## 使用方法
+## 应用内语言选择
 
-## 总结
+其实在iOS中国际化，就是切换不同的语言资源，显示不同的文件信息。然后系统用了一个Localizable的系统宏，来维护key/value的关系。系统中每一种语言对应一种bundle资源文件。当你在切换不同语言的时候，就去找对应的语言包中的资源。所以我们可以利用runtime动态加载不同的bundle来实现语言的切换。在demo中有具体的使用例子。
+
+这个部分一般只有两种实现方式：
+
+1.微信的方式：切换bundle。
+
+2.微博的方式：发送语言切换通知。
+
+这部分讨论的文章已经非常多，并且很成熟了；我就不过多赘述。
+
+## 疑难问题解决
+
+1.阿拉伯地区支持RTL
+
+2.textView系统不支持
+
+3.AttributedString富文本国际化
+
+
+太晚了，之后慢慢更新。
+
+
+
+
+
 
